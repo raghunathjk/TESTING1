@@ -1,0 +1,114 @@
+:root {
+  --black: #000000;
+  --gray: #808080;
+  --silver: #c0c0c0;
+  --white: #ffffff;
+  --maroon: #800000;
+  --red: #ff0000;
+  --purple: #800080;
+  --green: #008000;
+  --yellow: #ffff00;
+  --cyan: #00ccff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--silver);
+  color: var(--white);
+}
+
+header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
+
+#new-track-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-track-input {
+  flex: 1 1 0%;
+  background-color: var(--gray);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--cyan);
+  font-size: 1.25rem;
+}
+
+#new-track-input::placeholder {
+  font-style: italic;
+  color: var(--silver);
+}
+
+#new-track-submit {
+  color: var(--purple);
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--purple), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#new-track-submit:hover {
+  opacity: 0.8;
+}
+
+#new-track-submit:active {
+  opacity: 0.2;
+}
+
+main {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.track-list {
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+
+.track-list h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
+
+#tracks .track {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
