@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   const form = document.querySelector("#new-track-form");
   const input = document.querySelector("#new-track-input");
-  const list_el = document.querySelector("#tracks");
+  const tracksListElement = document.querySelector("#tracks");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -13,56 +13,55 @@ window.addEventListener("load", () => {
       return;
     }
 
-    const track_el = document.createElement("div");
-    track_el.classList.add("track");
+    const trackElement = document.createElement("div");
+    trackElement.classList.add("track");
 
-    const track_content_el = document.createElement("div");
-    track_content_el.classList.add("content");
-    // task_content_el.innerText = track;
+    const trackContentElement = document.createElement("div");
+    trackContentElement.classList.add("content");
 
-    track_el.appendChild(track_content_el);
+    trackElement.appendChild(trackContentElement);
 
-    const track_input_el = document.createElement("input");
-    track_input_el.classList.add("text");
-    track_input_el.type = "text";
-    track_input_el.value = track;
-    track_input_el.setAttribute("readOnly", "readOnly");
+    const trackInputElement = document.createElement("input");
+    trackInputElement.classList.add("text");
+    trackInputElement.type = "text";
+    trackInputElement.value = track;
+    trackInputElement.setAttribute("readonly", "readonly");
 
-    track_content_el.appendChild(track_input_el);
+    trackContentElement.appendChild(trackInputElement);
 
-    const track_actions_el = document.createElement("div");
-    track_actions_el.classList.add("actions");
+    const trackActionsElement = document.createElement("div");
+    trackActionsElement.classList.add("actions");
 
-    const track_edit_el = document.createElement("button");
-    task_edit_el.classList.add("edit");
-    track_edit_el.innerText = "Edit";
+    const trackEditElement = document.createElement("button");
+    trackEditElement.classList.add("edit");
+    trackEditElement.innerText = "Edit";
 
-    const track_delete_el = document.createElement("button");
-    track_delete_el.classList.add("delete");
-    track_delete_el.innerText = "Delete";
+    const trackDeleteElement = document.createElement("button");
+    trackDeleteElement.classList.add("delete");
+    trackDeleteElement.innerText = "Delete";
 
-    track_actions_el.appendChild(track_edit_el);
-    track_actions_el.appendChild(track_delete_el);
+    trackActionsElement.appendChild(trackEditElement);
+    trackActionsElement.appendChild(trackDeleteElement);
 
-    track_el.appendChild(track_actions_el);
+    trackElement.appendChild(trackActionsElement);
 
-    list_el.appendChild(track_el);
+    tracksListElement.appendChild(trackElement);
 
     input.value = "";
 
-    track_edit_el.addEventListener("click", () => {
-      if (track_edit_el.innerText.toLowerCase() == "edit") {
-        track_input_el.removeAttribute("readOnly");
-        track_input_el.focus();
-        track_edi_el.innerText = "Save";
+    trackEditElement.addEventListener("click", () => {
+      if (trackEditElement.innerText.toLowerCase() == "edit") {
+        trackInputElement.removeAttribute("readonly");
+        trackInputElement.focus();
+        trackEditElement.innerText = "Save";
       } else {
-        track_input_el.setAttribute("readOnly", "readOnly");
-        track_input_el.innerText = "Edit";
+        trackInputElement.setAttribute("readonly", "readonly");
+        trackInputElement.innerText = "Edit";
       }
     });
 
-    track_delete_el.addEventListener("click", () => {
-      list_el.removeChild(track_el);
+    trackDeleteElement.addEventListener("click", () => {
+      tracksListElement.removeChild(trackElement);
     });
   });
 });
