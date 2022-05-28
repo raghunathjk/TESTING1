@@ -4,12 +4,11 @@
   --silver: #a1a1a1;
   --white: #ffffff;
   --maroon: #800000;
-  --red: #c51313;
+  --red: #960e0e;
   --purple: #800080;
-  --green: #008000;
-  --violet: #6f23e9;
-  --cyan: #34d2fa;
-  --navy-blue: #000080;
+  --violet: #321069;
+  --blue: #128cfd;
+  --navy-blue: #000057;
 }
 
 * {
@@ -19,15 +18,16 @@
 }
 
 body {
+  background-color: #030303;
+  z-index: -100;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-image: url(./Assets/raga._white.jpg);
-  background-size: cover;
+  /* /* background-size: cover; */
   background-attachment: fixed;
   background-position: center;
-  position: relative;
+  position: relative; */
 }
+
 
 header {
   padding: 2rem 1rem;
@@ -40,7 +40,7 @@ header h1 {
   font-family: "Audiowide", cursive;
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--red);
+  color: var(--navy-blue);
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -68,7 +68,7 @@ button {
   padding: 0.7rem;
   border-radius: 1rem;
   margin-right: 1rem;
-  color: var(--cyan);
+  color: var(--blue);
   font-size: 1.25rem;
 }
 
@@ -79,12 +79,12 @@ button {
 }
 
 #new-track-submit {
-  color: var(--purple);
+  color: var(--blue);
   font-size: 1.25rem;
   font-weight: 700;
-  background-image: linear-gradient(to right, var(--purple), var(--red));
+  /* background-image: linear-gradient(to right, var(--purple), var(--red));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   cursor: pointer;
   transition: 0.5s;
   text-transform: uppercase;
@@ -113,7 +113,7 @@ main {
 .track-list h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--green);
+  color: var(--violet);
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -121,7 +121,7 @@ main {
 #tracks .track {
   display: flex;
   justify-content: space-between;
-  background-color: var(--black);
+  background-color: var(--gray);
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -133,9 +133,10 @@ main {
 }
 
 .text {
-  background-image: linear-gradient(to right, var(--cyan), var(--green));
+  color: var(--white);
+  /* background-image: linear-gradient(to right, var(--cyan), var(--green));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   font-size: 1.2rem;
   font-weight: bold;
   width: 100%;
@@ -145,7 +146,7 @@ main {
 
 .edit,
 .delete {
-  color: var(--purple);
+  color: var(--white);
   font-size: 1.15rem;
 }
 
@@ -171,14 +172,16 @@ main {
   opacity: 0.2;
 }
 
-.track .actions .edit {
-  background-image: linear-gradient(to right, var(--cyan), var(--green));
-  -webkit-background-clip: text;
+/* .track .actions .edit { */
+/* color: var(--black); */
+/* background-image: linear-gradient(to right, var(--cyan), var(--green)); */
+/* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
-.track .actions .delete {
-  background-image: linear-gradient(to right, var(--green), var(--cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/* .track .actions .delete {
+  color: var(--black); */
+/* background-image: linear-gradient(to right, var(--green), var(--cyan)); */
+/* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+/* } */

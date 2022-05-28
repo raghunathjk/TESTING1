@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
         trackEditElement.innerText = "Save";
       } else {
         trackInputElement.setAttribute("readonly", "readonly");
-        trackInputElement.innerText = "Edit";
+        trackEditElement.innerText = "Edit";
       }
     });
 
